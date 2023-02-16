@@ -19,6 +19,15 @@ jobs:
       run: |
             json_string=`cat version-release.json`
             echo app version is $json_string
+            app_version=`cat version-release.json|grep unified_version|cut -d ":" -f2`
+            app_version="${app_version//'%'/'%25'}"
+            app_version="${app_version//$'\n'/'%0A'}"
+            app_version="${app_version//$'\r'/'%0D'}"
+            echo app version is $app_version
     - name: Test with pytest
       run: |
-           echo build done
+            app_version="${{fromJson(steps.set_var.outputs.versionRelease).unified_version}}"
+            filename='python-test-v'
+            file_ext='.zip'
+            bash test_relase.sh $filename$app_version$file_ext
+            echo build done
