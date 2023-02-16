@@ -28,5 +28,5 @@ jobs:
       run: |
             filename='python-test-v'
             file_ext='.zip'
-            bash test_relase.sh $filename$app_version$file_ext
+            bash test_release.sh $filename$app_version$file_ext
             echo build done
