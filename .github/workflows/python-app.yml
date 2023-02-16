@@ -26,7 +26,6 @@ jobs:
             echo app version is $app_version
     - name: Test with pytest
       run: |
-            app_version="${{fromJson(steps.set_var.outputs.versionRelease).unified_version}}"
             filename='python-test-v'
             file_ext='.zip'
             bash test_relase.sh $filename$app_version$file_ext
