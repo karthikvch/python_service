@@ -1,0 +1,13 @@
+{
+    "unified_version":"2022.04.12.04",
+    "applications": [
+                {
+                        "name":"app_1",
+                        "version":"2022.04.12.04"
+                },
+                {
+                        "name":"app_2",
+                        "version":"2022.04.12.04"
+                }
+        ]
+}
