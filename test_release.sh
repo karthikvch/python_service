@@ -6,7 +6,7 @@ chmod -R 775  *.sh
 pwd
 cd ..
 
-zip -r $local_path python-test
+zip -r $local_path python_test
 
 mv $local_path python_test
 
