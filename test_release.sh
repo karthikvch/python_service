@@ -8,8 +8,8 @@ cd ..
 
 zip -r $local_path python-test
 
-mv $local_path python-test
+mv $local_path python_test
 
-cd python-test
+cd python_test
 
 echo "done"
