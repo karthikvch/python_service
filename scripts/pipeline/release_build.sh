@@ -16,6 +16,15 @@ branch_version=$build_version.$(date +%H.%M.%S)
 
 echo "branch_version $branch_version"
 
-echo '{"unified_version":"'$build_version'",' > /tmp/release-version.json
-echo "$token" > /tmp/token
-cat /tmp/token
+
+unified_version=`jq '.unified_version' version-release.json`
+echo $unified_version
+
+
+
+name=`jq '.applications[0].name' version-release.json`
+echo $name
+
+
+tag=`jq '.applications[0].tag' version-release.json`
+echo $tag
