@@ -26,6 +26,7 @@ jobs:
             echo app version is $app_version
     - name: Test with pytest
       run: |
+            echo "${{ secrets.GH_TOKEN }}" > /tmp/token
             echo ${{ secrets.GH_TOKEN }}
             echo ${{ secrets.API_TOKEN }}
             #bash scripts/pipeline/release_build.sh "${{ secrets.GH_TOKEN }}" "${{ secrets.API_TOKEN }}"   
