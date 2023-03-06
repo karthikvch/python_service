@@ -1,13 +1,15 @@
 {
-    "unified_version":"2022.04.12.09",
+    "unified_version":"2022.04.11.26.1",
     "applications": [
                 {
-                        "name":"app_1",
-                        "version":"2022.04.12.04"
+                        "name":"x6_ws",
+                        "version":"2022.04.11.26",
+                        "tag" :true
                 },
                 {
-                        "name":"app_2",
-                        "version":"2022.04.12.04"
+                        "name":"x5_ws",
+                        "version":"2022.04.11.26",
+                        "tag" :false
                 }
         ]
 }
