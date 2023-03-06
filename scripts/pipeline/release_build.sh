@@ -1,8 +1,10 @@
 #!/bin/bash
+echo "in release_build.sh file"
 token=$1
 api_token=$2
 appversion=$(cat version-release.json|grep unified_version|cut -d ":" -f2)
 cd /tmp
+echo pwd
 echo "$appversion">version
 sed -e 's/"//g' -i version
 sed -e 's/,//g' -i version
