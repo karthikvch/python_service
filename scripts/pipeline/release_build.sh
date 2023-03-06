@@ -29,18 +29,17 @@ sed -e 's/,//g' -i version
 build_version=$(cat version)
 echo "build_versionL $build_version"
 branch_version=$build_version.$(date +%H.%M.%S)
-
+echo '{
+      "unified_version":"'$build_version'",' > /tmp/release-version.json
+echo "$token" > /tmp/token
+cat /tmp/token
+gh auth login --with-token < /tmp/token
 echo "branch_version $branch_version"
 
 
 unified_version=`jq '.unified_version' version-release.json`
 echo $unified_version
-
-
-
 name=`jq '.applications[0].name' version-release.json`
 echo $name
-
-
 tag=`jq '.applications[0].tag' version-release.json`
 echo $tag
