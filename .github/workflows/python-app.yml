@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: print Secrete and Variables
-      run: echo "Secreate Value ${{secrets.USER_NAME}}  and Varibale is ${{vars.USER_EMAIL}}"
+      run: echo "Secreate Value ${{secrets.USER_NAME1}}  and Varibale is ${{vars.USER_EMAIL1}}"
     - name: Import Script Parameter
       if: always()
       run: |
