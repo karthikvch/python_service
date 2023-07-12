@@ -14,9 +14,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: print Secrete and Variables
+      run: echo "Secreate Value ${{secrets.USER_NAME}}  and Varibale is ${{vars.USER_EMAIL}}"
     - name: Import Script Parameter
-        if: always()
-        run: |
+      if: always()
+      run: |
           json_string=`cat version-release.json`
           echo app version is $json_string
     - name: Test with pytest
