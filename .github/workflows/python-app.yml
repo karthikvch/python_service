@@ -5,8 +5,8 @@ name: Python application
 
 on:
   push:
-       tags:
-         - 'release/*'
+   branches: [ "main" ]
+  
 jobs:
   build:
 
