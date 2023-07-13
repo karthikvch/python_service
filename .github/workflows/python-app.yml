@@ -5,8 +5,8 @@ name: Python application
 
 on:
   push:
-       tags:
-         - 'release/*'
+   branches: [ "main" ]
+  
 jobs:
   build:
 
@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: print Secrete and Variables
-      run: echo "Secreate Value ${{secrets.USER_NAME}}  and Varibale is ${{vars.USER_EMAIL}}"
+      run: echo "Secreate USER_EMAIL1 ${{ secrets.USER_EMAIL1 }} and USER_EMAIL ${{ vars.USER_EMAIL }} and var is  ${{ vars.API_TOKEN }}"
     - name: Import Script Parameter
       if: always()
       run: |
