@@ -6,8 +6,8 @@ name: Verifying the GitHub WorkFlow
 on:
   push:
    branches: [ "main" ]
-  env:
-    global-var: org level variable
+env:
+  global-var: org level variable
 jobs:
   build:
     runs-on: ubuntu-latest
