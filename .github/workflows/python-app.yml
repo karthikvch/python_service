@@ -1,17 +1,16 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Python application
+name: Verifying the GitHub WorkFlow
 
 on:
   push:
    branches: [ "main" ]
-  
+  env:
+    global-var: org level variable
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: print Secrete and Variables
@@ -29,6 +28,7 @@ jobs:
         VERSION_PREFIX: MyPrefix
       run: |
         echo We can use a variable multiple time: $VERSION_PREFIX
+        echo "Global VAR: ${{ env.global-var }}"
         CHECK_VAL=karthik
         echo $CHECK_VAL
         echo inside a multi-line script: $VERSION_PREFIX
