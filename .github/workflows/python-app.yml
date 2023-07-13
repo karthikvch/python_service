@@ -7,7 +7,7 @@ on:
   push:
    branches: [ "main" ]
 env:
-  global-var: org level variable
+  GLOBAL_ENV: org level variable
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,7 +28,7 @@ jobs:
         VERSION_PREFIX: MyPrefix
       run: |
         echo We can use a variable multiple time: $VERSION_PREFIX
-        echo $global-var
+        echo $GLOBAL_ENV
         CHECK_VAL=karthik
         echo $CHECK_VAL
         echo inside a multi-line script: $VERSION_PREFIX
