@@ -24,3 +24,9 @@ jobs:
     - name: Test with pytest
       run: |
         echo build don
+    - name: Display local environment variable
+      env:
+        VERSION_PREFIX: MyPrefix
+      run: |
+        echo We can use a variable multiple time: $VERSION_PREFIX
+        echo inside a multi-line script: $VERSION_PREFIX
