@@ -29,4 +29,6 @@ jobs:
         VERSION_PREFIX: MyPrefix
       run: |
         echo We can use a variable multiple time: $VERSION_PREFIX
+        CHECK_VAL=karthik
+        echo $CHECK_VAL
         echo inside a multi-line script: $VERSION_PREFIX
