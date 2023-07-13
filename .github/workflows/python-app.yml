@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: print Secrete and Variables
-      run: echo "Secreate USER_EMAIL1 ${{ secrets.USER_EMAIL1 }} and USER_EMAIL ${{ secrets.USER_EMAIL }} and var is  ${{ vars.API_TOKEN }}"
+      run: echo "Secreate USER_EMAIL1 ${{ secrets.USER_EMAIL1 }} and USER_EMAIL ${{ vars.USER_EMAIL }} and var is  ${{ vars.API_TOKEN }}"
     - name: Import Script Parameter
       if: always()
       run: |
