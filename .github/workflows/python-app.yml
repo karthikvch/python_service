@@ -12,7 +12,8 @@ env:
   GLOBAL_ENV: org level variable
 jobs:
   build:
-    runs-on: test-bench-self-hosted
+    runs-on: 
+     - test-bench-self-hosted
     steps:
     - uses: actions/checkout@v3
     - name: print Secrete and Variables
