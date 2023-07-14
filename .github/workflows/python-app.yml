@@ -13,7 +13,8 @@ env:
 jobs:
   build:
     runs-on: 
-     - test-bench-self-hosted
+     - self-hosted
+     - label-1
     steps:
     - uses: actions/checkout@v3
     - name: print Secrete and Variables
