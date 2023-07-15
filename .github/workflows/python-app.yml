@@ -11,6 +11,7 @@ on:
 env:
   GLOBAL_ENV: org level variable
 jobs:
+
   build:
     runs-on: 
      - self-hosted
